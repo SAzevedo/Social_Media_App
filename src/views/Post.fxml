@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: teal;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.PostController">
+   <top>
+      <AnchorPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Hyperlink fx:id="userLink" alignment="CENTER" layoutX="243.0" layoutY="100.0" onAction="#userLinkClicked" prefHeight="50.0" prefWidth="150.0" text="username">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Hyperlink>
+            <Label alignment="CENTER" layoutX="243.0" layoutY="50.0" prefHeight="50.0" prefWidth="150.0" text="Posted By:">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="contentArea" editable="false" layoutX="393.0" layoutY="50.0" prefHeight="100.0" prefWidth="500.0" style="-fx-background-color: white;" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect></TextArea>
+            <ImageView fitHeight="115.0" fitWidth="250.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="17.0">
+               <image>
+                  <Image url="@../../resources/OnlineLogo.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="300.0" prefHeight="50.0" prefWidth="300.0" text="Post">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="50.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="homeBtn" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#homeBtnClicked" prefHeight="30.0" prefWidth="100.0" text="Home" AnchorPane.leftAnchor="25.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="exitBtn" layoutX="780.0" layoutY="10.0" mnemonicParsing="false" onAction="#exitBtnClicked" prefHeight="30.0" prefWidth="100.0" text="Exit App" AnchorPane.rightAnchor="25.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="replyBtn" layoutX="400.0" layoutY="10.0" mnemonicParsing="false" onAction="#replyBtnClicked" prefHeight="30.0" prefWidth="100.0" text="Reply" AnchorPane.leftAnchor="400.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="650.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="200.0" layoutY="-1.0" prefHeight="30.0" prefWidth="200.0" text="Replies" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <ScrollPane fx:id="scrollList" layoutY="38.0" prefHeight="350.0" prefWidth="600.0">
+               <effect>
+                  <DropShadow />
+               </effect></ScrollPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="150.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="editBtn" alignment="CENTER" layoutX="25.0" layoutY="48.0" mnemonicParsing="false" onAction="#editBtnClicked" prefHeight="30.0" prefWidth="100.0" text="Edit Post" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="50.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="deleteBtn" alignment="CENTER" layoutX="25.0" layoutY="117.0" mnemonicParsing="false" onAction="#deleteBtnClicked" prefHeight="30.0" prefWidth="100.0" text="Delete Post" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="120.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </children></AnchorPane>
+   </right>
+</BorderPane>
